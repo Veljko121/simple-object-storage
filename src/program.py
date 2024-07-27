@@ -12,7 +12,6 @@ def serve_file(filename: str):
 
 @app.route('/<path:path>', methods=['POST'])
 def upload_file(path: str):
-    print(path)
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
 
